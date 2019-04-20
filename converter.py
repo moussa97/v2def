@@ -10,16 +10,40 @@ import numpy as np
 import json as json
 
 
+class macro:
+    size = 0  ;
+    
+class layer:
+    direction = "" ;
+    pitch = "" ;
+    width = "" ;
+    spacing = "" ;
+    offset = "" ;
+    
+macros = [];
+layers = [] ;
+
 with open('mux4x1_json') as f:
     data = json.load(f)
     
 out = open('output.txt' , 'w' ) ;
 lef = open( 'osu035.lef' , 'r' );
 
-lefFile = lef.readlines() ;
+#lefFile = lef.readlines() ;
 
-for i in range(5) :
-    out.write( lefFile[i] );  
-    print ( lefFile[i] ) ;
-print(data) ;
-f.close() 
+    
+# print(data['modules']['mux4x1']['ports']['a']) ;  
+
+layers.append(layer);
+layer.pitch = "34";
+
+
+with open('osu035.lef') as mylef:  
+   for line in mylef:
+       try:
+           first = line.split()[0] ;
+           if( first == 'LAYER'):
+               case = 1 ;
+       except:
+           pass
+       
