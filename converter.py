@@ -120,6 +120,14 @@ with open('osu035.lef') as mylef:
                             #print ( name_of_pin , "@@@@" )
                             macros[type][name_of_pin] = {} ;
 
+                    if (case == 6 ):
+                        macros[type][name_of_pin][second] = line.split() ;
+
+                    if (case == 5 and first == "LAYER"):
+                        case = 6
+                        macros[type][name_of_pin][second] = {}
+
+
 
             except:
                 pass
@@ -149,7 +157,10 @@ for indx , cells in data['modules']['mux4x1']['cells'].items():
     out.write( cells['type'] + "\n");
 out.write("END COMPONENTS" + "\n");
 
+#write pins
+out.write("PINS")
 
+out.write("END")
 
 print(layers_metal);
 print(vias);

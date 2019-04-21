@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c1c9ecb-98eb-4599-be7a-905c84846a47" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/converter.py" beforeDir="false" afterPath="$PROJECT_DIR$/converter.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output.def" beforeDir="false" afterPath="$PROJECT_DIR$/output.def" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/presentation.pptx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/converter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="635">
-              <caret line="151" lean-forward="true" selection-start-line="151" selection-end-line="151" />
+            <state relative-caret-position="380">
+              <caret line="161" lean-forward="true" selection-start-line="161" selection-end-line="161" />
             </state>
           </provider>
         </entry>
@@ -170,8 +172,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/converter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="635">
-          <caret line="151" lean-forward="true" selection-start-line="151" selection-end-line="151" />
+        <state relative-caret-position="380">
+          <caret line="161" lean-forward="true" selection-start-line="161" selection-end-line="161" />
         </state>
       </provider>
     </entry>
