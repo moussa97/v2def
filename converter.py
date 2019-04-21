@@ -128,22 +128,26 @@ with open('osu035.lef') as mylef:
 out.write( 'VERSION 5.7 ;\n DIVIDERCHAR "/" ;\n BUSBITCHARS "[]" ; \n DESIGN c17 ;\n UNITS DISTANCE MICRONS 1000 ;\n');
 
 #write tracks
+out.write("\n");
 for key, value in sorted(layers_metal.items()):
     temp =  'Y ' if layers_metal['metal1']=="HORIZIONTAL" else 'X' ;
     out.write( "TRACKS " + temp + " DO " + temp + " 400 DO 25 STEP " + str(float(layers_metal[key]["pitch"])*100) + " LAYER " + key + "\n" )
 
 #wrtie VIAs
+out.write("\n");
 out.write( "VIAS " + str(len(vias)) )
 for key, value in sorted(vias.items()):
     out.write( "-" + key + "\n");
     for newkey , newvalue in sorted(value.items()):
         out.write("+" + newkey + "( " + str(float(newvalue.split()[1])*1000) + "," + str(float(newvalue.split()[2])*1000) + ") (" + str(float(newvalue.split()[3])*1000) + "," +str(float(newvalue.split()[4])*1000) + ")" + "\n");
-out.write("END VIAS")
+out.write("END VIAS \n")
 
 # #write componenets
-print("COMPONENTS" + str(len(data['modules']['mux4x1']['cells'])));
+out.write("\n");
+out.write("COMPONENTS " + str(len(data['modules']['mux4x1']['cells'])) + "\n" );
 for indx , cells in data['modules']['mux4x1']['cells'].items():
-    out.write( cells['type'] );
+    out.write( cells['type'] + "\n");
+out.write("END COMPONENTS" + "\n");
 
 
 
