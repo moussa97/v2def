@@ -42,4 +42,18 @@ AND2X2
 OAI21X1
 AOI22X1
 END COMPONENTS
-PINSEND
+
+PINS12
+a<0> + NET a<0> 
+a<1> + NET a<1> 
+b<0> + NET b<0> 
+b<1> + NET b<1> 
+c<0> + NET c<0> 
+c<1> + NET c<1> 
+d<0> + NET d<0> 
+d<1> + NET d<1> 
+sel<0> + NET sel<0> 
+sel<1> + NET sel<1> 
+y<0> + NET y<0> 
+y<1> + NET y<1> 
+END

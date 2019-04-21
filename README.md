@@ -5,7 +5,7 @@ introduction:
 This is python program that converts verilog gate level netlist into a DEF file. Def fiel is used to represent the physical layout of an IC in an ASCII format. it represents the netlist and the circuit layout. We use DEF along with LEF to represent the complete physical layout of an integrated circuit while it is being designed.
 
 limitations:
-	All the pins and nets information are extraxted in nested dictionaries inside the python code but are not written the output file
+	All the pins and nets information are extraxted in nested dictionaries inside the python code but are not in the written the output file
 	
 how to use:
 	1. insert the .lef file and the JSON formated gate level netlist in the same directory as the converter.python

@@ -170,7 +170,11 @@ for indx , cells in data['modules']['mux4x1']['cells'].items() :
 out.write("END COMPONENTS" + "\n");
 
 #write pins
-out.write("PINS")
+out.write("\n");
+out.write("PINS" + str(len(data['modules']['mux4x1']['ports'].items())*2) + "\n")
+for key , value in data['modules']['mux4x1']['ports'].items() :
+    out.write(key + "<0> + NET " + key + "<0> \n" );
+    out.write(key + "<1> + NET " + key + "<1> \n" );
 
 out.write("END")
 
