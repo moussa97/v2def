@@ -1,0 +1,362 @@
+{
+  "creator": "Yosys 0.7 (git sha1 61f6811, gcc 6.2.0-11ubuntu1 -O2 -fdebug-prefix-map=/build/yosys-OIL3SR/yosys-0.7=. -fstack-protector-strong -fPIC -Os)",
+  "modules": {
+    "mux4x1": {
+      "attributes": {
+        "top": 1,
+        "src": "mux4x1.v:1"
+      },
+      "ports": {
+        "a": {
+          "direction": "input",
+          "bits": [ 2, 3 ]
+        },
+        "b": {
+          "direction": "input",
+          "bits": [ 4, 5 ]
+        },
+        "c": {
+          "direction": "input",
+          "bits": [ 6, 7 ]
+        },
+        "d": {
+          "direction": "input",
+          "bits": [ 8, 9 ]
+        },
+        "sel": {
+          "direction": "input",
+          "bits": [ 10, 11 ]
+        },
+        "y": {
+          "direction": "output",
+          "bits": [ 12, 13 ]
+        }
+      },
+      "cells": {
+        "$abc$218$auto$blifparse.cc:286:parse_blif$219": {
+          "hide_name": 1,
+          "type": "INVX1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 2 ],
+            "Y": [ 14 ]
+          }
+        },
+        "$abc$218$auto$blifparse.cc:286:parse_blif$220": {
+          "hide_name": 1,
+          "type": "NOR2X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 11 ],
+            "B": [ 10 ],
+            "Y": [ 15 ]
+          }
+        },
+        "$abc$218$auto$blifparse.cc:286:parse_blif$221": {
+          "hide_name": 1,
+          "type": "INVX1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 11 ],
+            "Y": [ 16 ]
+          }
+        },
+        "$abc$218$auto$blifparse.cc:286:parse_blif$222": {
+          "hide_name": 1,
+          "type": "INVX1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 10 ],
+            "Y": [ 17 ]
+          }
+        },
+        "$abc$218$auto$blifparse.cc:286:parse_blif$223": {
+          "hide_name": 1,
+          "type": "OAI21X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 6 ],
+            "B": [ 16 ],
+            "C": [ 17 ],
+            "Y": [ 18 ]
+          }
+        },
+        "$abc$218$auto$blifparse.cc:286:parse_blif$224": {
+          "hide_name": 1,
+          "type": "NAND3X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 11 ],
+            "B": [ 10 ],
+            "C": [ 8 ],
+            "Y": [ 19 ]
+          }
+        },
+        "$abc$218$auto$blifparse.cc:286:parse_blif$225": {
+          "hide_name": 1,
+          "type": "NAND3X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 10 ],
+            "B": [ 4 ],
+            "C": [ 16 ],
+            "Y": [ 20 ]
+          }
+        },
+        "$abc$218$auto$blifparse.cc:286:parse_blif$226": {
+          "hide_name": 1,
+          "type": "AND2X2",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 20 ],
+            "B": [ 19 ],
+            "Y": [ 21 ]
+          }
+        },
+        "$abc$218$auto$blifparse.cc:286:parse_blif$227": {
+          "hide_name": 1,
+          "type": "AOI22X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 14 ],
+            "B": [ 15 ],
+            "C": [ 18 ],
+            "D": [ 21 ],
+            "Y": [ 12 ]
+          }
+        },
+        "$abc$218$auto$blifparse.cc:286:parse_blif$228": {
+          "hide_name": 1,
+          "type": "INVX1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 3 ],
+            "Y": [ 22 ]
+          }
+        },
+        "$abc$218$auto$blifparse.cc:286:parse_blif$229": {
+          "hide_name": 1,
+          "type": "NAND3X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 11 ],
+            "B": [ 10 ],
+            "C": [ 9 ],
+            "Y": [ 23 ]
+          }
+        },
+        "$abc$218$auto$blifparse.cc:286:parse_blif$230": {
+          "hide_name": 1,
+          "type": "NAND3X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 10 ],
+            "B": [ 5 ],
+            "C": [ 16 ],
+            "Y": [ 24 ]
+          }
+        },
+        "$abc$218$auto$blifparse.cc:286:parse_blif$231": {
+          "hide_name": 1,
+          "type": "AND2X2",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 24 ],
+            "B": [ 23 ],
+            "Y": [ 25 ]
+          }
+        },
+        "$abc$218$auto$blifparse.cc:286:parse_blif$232": {
+          "hide_name": 1,
+          "type": "OAI21X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 7 ],
+            "B": [ 16 ],
+            "C": [ 17 ],
+            "Y": [ 26 ]
+          }
+        },
+        "$abc$218$auto$blifparse.cc:286:parse_blif$233": {
+          "hide_name": 1,
+          "type": "AOI22X1",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "connections": {
+            "A": [ 22 ],
+            "B": [ 15 ],
+            "C": [ 26 ],
+            "D": [ 25 ],
+            "Y": [ 13 ]
+          }
+        }
+      },
+      "netnames": {
+        "$abc$218$n13": {
+          "hide_name": 1,
+          "bits": [ 14 ],
+          "attributes": {
+          }
+        },
+        "$abc$218$n14_1": {
+          "hide_name": 1,
+          "bits": [ 15 ],
+          "attributes": {
+          }
+        },
+        "$abc$218$n15": {
+          "hide_name": 1,
+          "bits": [ 16 ],
+          "attributes": {
+          }
+        },
+        "$abc$218$n16_1": {
+          "hide_name": 1,
+          "bits": [ 17 ],
+          "attributes": {
+          }
+        },
+        "$abc$218$n17": {
+          "hide_name": 1,
+          "bits": [ 18 ],
+          "attributes": {
+          }
+        },
+        "$abc$218$n18_1": {
+          "hide_name": 1,
+          "bits": [ 19 ],
+          "attributes": {
+          }
+        },
+        "$abc$218$n19_1": {
+          "hide_name": 1,
+          "bits": [ 20 ],
+          "attributes": {
+          }
+        },
+        "$abc$218$n20_1": {
+          "hide_name": 1,
+          "bits": [ 21 ],
+          "attributes": {
+          }
+        },
+        "$abc$218$n22_1": {
+          "hide_name": 1,
+          "bits": [ 22 ],
+          "attributes": {
+          }
+        },
+        "$abc$218$n23": {
+          "hide_name": 1,
+          "bits": [ 23 ],
+          "attributes": {
+          }
+        },
+        "$abc$218$n24_1": {
+          "hide_name": 1,
+          "bits": [ 24 ],
+          "attributes": {
+          }
+        },
+        "$abc$218$n25": {
+          "hide_name": 1,
+          "bits": [ 25 ],
+          "attributes": {
+          }
+        },
+        "$abc$218$n26": {
+          "hide_name": 1,
+          "bits": [ 26 ],
+          "attributes": {
+          }
+        },
+        "a": {
+          "hide_name": 0,
+          "bits": [ 2, 3 ],
+          "attributes": {
+            "src": "mux4x1.v:1"
+          }
+        },
+        "b": {
+          "hide_name": 0,
+          "bits": [ 4, 5 ],
+          "attributes": {
+            "src": "mux4x1.v:1"
+          }
+        },
+        "c": {
+          "hide_name": 0,
+          "bits": [ 6, 7 ],
+          "attributes": {
+            "src": "mux4x1.v:1"
+          }
+        },
+        "d": {
+          "hide_name": 0,
+          "bits": [ 8, 9 ],
+          "attributes": {
+            "src": "mux4x1.v:1"
+          }
+        },
+        "sel": {
+          "hide_name": 0,
+          "bits": [ 10, 11 ],
+          "attributes": {
+            "src": "mux4x1.v:1"
+          }
+        },
+        "y": {
+          "hide_name": 0,
+          "bits": [ 12, 13 ],
+          "attributes": {
+            "src": "mux4x1.v:1"
+          }
+        }
+      }
+    }
+  }
+}

@@ -34,7 +34,8 @@ layers_metal = {} ;
 vias = {} ;
 macros= {};
 
-
+sizex = 0 ;
+sizey = 0 ;
 with open('osu035.lef') as mylef:  
     for indx, line in enumerate(mylef):
 
@@ -119,6 +120,10 @@ with open('osu035.lef') as mylef:
                             name_of_pin = second ;
                             #print ( name_of_pin , "@@@@" )
                             macros[type][name_of_pin] = {} ;
+                        else:
+                            if(first == "SIZE" ):
+                                macros[type]['sizex'] = float( line.split()[1] ) * 100
+                                macros[type]['sizey'] = float( line.split()[3] ) * 100
 
                     if (case == 6 ):
                         macros[type][name_of_pin][second] = line.split() ;
@@ -135,6 +140,13 @@ with open('osu035.lef') as mylef:
 #write intro
 out.write( 'VERSION 5.7 ;\n DIVIDERCHAR "/" ;\n BUSBITCHARS "[]" ; \n DESIGN c17 ;\n UNITS DISTANCE MICRONS 1000 ;\n');
 
+#calculate DIE AREA
+out.write("\n")
+for indx , cells in data['modules']['mux4x1']['cells'].items() :
+    sizex = sizex + macros[cells['type']]['sizex'] ;
+    sizey = sizey + macros[cells['type']]['sizey'];
+out.write( "DIEAREA (" + str(sizex) + "," + str(sizey) + ") \n" );
+
 #write tracks
 out.write("\n");
 for key, value in sorted(layers_metal.items()):
@@ -150,10 +162,10 @@ for key, value in sorted(vias.items()):
         out.write("+" + newkey + "( " + str(float(newvalue.split()[1])*1000) + "," + str(float(newvalue.split()[2])*1000) + ") (" + str(float(newvalue.split()[3])*1000) + "," +str(float(newvalue.split()[4])*1000) + ")" + "\n");
 out.write("END VIAS \n")
 
-# #write componenets
+#write componenets
 out.write("\n");
 out.write("COMPONENTS " + str(len(data['modules']['mux4x1']['cells'])) + "\n" );
-for indx , cells in data['modules']['mux4x1']['cells'].items():
+for indx , cells in data['modules']['mux4x1']['cells'].items() :
     out.write( cells['type'] + "\n");
 out.write("END COMPONENTS" + "\n");
 
